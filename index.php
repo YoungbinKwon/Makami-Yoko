@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>PHP Starter Application</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-	<table>
-		<tr>
-			<td style='width: 30%;'>
-				<img class = 'newappIcon' src='images/newapp-icon.png'>
-			</td>
-			<td>
-				<h1 id = "message"><?php echo "Hello World!"; ?></h1>
-				<p class='description'></p> Thanks for creating a <span class="blue">PHP Starter Application</span>.
-			</td>
-		</tr>
-	</table>
-</body>
-</html>
+<?php
+
+define('ROOT_PATH', realpath(dirname(__FILE__)));
+require_once('env_var.php');
+
+$includes = array(ROOT_PATH . '/Lib/db', ROOT_PATH . '/Lib/util', ROOT_PATH . '/Lib/mvc', ROOT_PATH . '/Lib/igo-php-0.1.7/lib', ROOT_PATH . '/Model');
+$incPath = implode(PATH_SEPARATOR, $includes);
+set_include_path(get_include_path() . PATH_SEPARATOR . $incPath);
+
+function __autoload($className){
+    if (stream_resolve_include_path($className . ".php")) {
+        require_once $className . ".php";
+    }
+}
+
+$dispatcher = new Dispatcher();
+$dispatcher->dispatch();

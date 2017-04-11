@@ -1,5 +1,5 @@
 <?php
-define("STTKEY", "742e7266-6304-49ab-9586-d36b30e16cf5:XYrovAlvmIUF");
-define("NLCUSERNAME", "85d6af8a-4ea8-4da1-8fed-ff0e5a255a6b");
-define("NLCPASSWORD", "KLZzjXHSrFKT");
+define("STTKEY", "db9fface-12da-415c-be28-b320a65d7482:8hwF2hnZX60D");
+define("NLCUSERNAME", "33a90d48-44ba-47e3-8a80-ae663fd96ba1");
+define("NLCPASSWORD", "ZRqigXjo4yAL");
 define("GORAAPPID","1093436871160820230");

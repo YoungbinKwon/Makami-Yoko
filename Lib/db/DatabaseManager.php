@@ -9,9 +9,9 @@ Class DatabaseManager
         //local dev
         if(!isset($_ENV["VCAP_SERVICES"])) {
             $mysql_server_name = "us-cdbr-iron-east-03.cleardb.net";
-            $mysql_username = "b5efbbb2d6ac89";
-            $mysql_password = "564372a3";
-            $mysql_database = "ad_b6ba698c9ca6080";
+            $mysql_username = "ba0aef82247410";
+            $mysql_password = "212f591b";
+            $mysql_database = "ad_35a190907925cfc";
         //Bluemix
         } else {
             $vcap_services = json_decode($_ENV["VCAP_SERVICES" ]);

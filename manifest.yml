@@ -1,0 +1,16 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  domain: mybluemix.net
+  name: Makami-Yoko
+  host: Makami-Yoko
+  disk_quota: 1024M
+  services:
+  - API Connect-y9
+  - Text to Speech-v7
+  - Tradeoff Analytics-lu
+  - Availability Monitoring-g5
+  - Speech to Text-ay
+  - Natural Language Classifier-ys
+  - ClearDB MySQL Database-n0

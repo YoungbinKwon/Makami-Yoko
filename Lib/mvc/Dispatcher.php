@@ -26,7 +26,10 @@ class Dispatcher
                 $className = 'VoiceSearch';
                 break;
             case 'reserve':
-                $className = 'Reserve';
+            $className = 'Reserve';
+                break;
+            case 'tradeoff':
+                $className = 'TradeOff';
                 break;
             case 'login':
             default:

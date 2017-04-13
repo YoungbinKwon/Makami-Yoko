@@ -17,6 +17,9 @@ class VoiceSearchController
 
     public function searchAction()
     {
+        $tts = new TextToSpeech();
+        $result = $tts->getAudio("がんばれモモちゃん");
+
         if (isset($_POST["audio"])) {
             $stt = new SpeechToText();
             $voice_result = $stt->getText($_POST["audio"]);

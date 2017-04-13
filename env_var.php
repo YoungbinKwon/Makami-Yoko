@@ -5,3 +5,5 @@ define("NLCPASSWORD", "ZRqigXjo4yAL");
 define("GORAAPPID","1093436871160820230");
 define("TTSUSERNAME", "4b7626a3-2f57-4ba2-ab12-5b11653e76e8");
 define("TTSPASSWORD", "nDBMluWI5guk");
+define("TRADEOFFUSERNAME", "bfd058a7-7290-4611-abdc-8e0ddec400a4");
+define("TRADEOFFPASSWORD", "kIu7qQlj3mru");

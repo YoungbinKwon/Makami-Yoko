@@ -19,6 +19,8 @@ class TextToSpeech {
             $text;
         var_dump($url);
 
+        return $url;
+
         } catch(Exception $e) {
             return false;
         }

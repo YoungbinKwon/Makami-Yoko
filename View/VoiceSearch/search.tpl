@@ -10,7 +10,7 @@
 <body>
     <div class="wrapper">
         <div>
-            <audio src="https://4b7626a3-2f57-4ba2-ab12-5b11653e76e8:nDBMluWI5guk@stream.watsonplatform.net/text-to-speech/api/v1/synthesize?voice=ja-JP_EmiVoice&text=がんばれモモちゃん" autoplay loop></audio>
+            <audio src="<?php echo $result_text; ?>" autoplay></audio>
         </div>
         <div>
             <button type="button" class="start">start</button>

@@ -32,8 +32,10 @@ class Dispatcher
                 $className = 'TradeOff';
                 break;
             case 'login':
-            default:
                 $className = 'Login';
+                break;
+            default:
+                $className = 'Main';
                 break;
         }
 

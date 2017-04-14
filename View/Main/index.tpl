@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
       <html lang="en">
       <head>
       	<meta charset="utf-8">
@@ -13,11 +13,11 @@
 <!-- load stylesheets -->
 <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Neucha|Sigmar+One|Basic" rel="stylesheet">
 <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
-<link rel="stylesheet" href="/css/bootstrap.min.css">                                                <!-- Bootstrap style -->
-<link rel="stylesheet" href="/css/flexslider.css">                                                   <!-- Flexslider style -->       
-<link rel="stylesheet" href="/css/templatemo-style.css">                                             <!-- Templatemo style -->
-<link rel="stylesheet" href="/css/animations.css">                                             <!-- Animation style -->
-<link rel="stylesheet" href="/css/weather-icons.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">                                                <!-- Bootstrap style -->
+<link rel="stylesheet" href="css/flexslider.css">                                                   <!-- Flexslider style -->       
+<link rel="stylesheet" href="css/templatemo-style.css">                                             <!-- Templatemo style -->
+<link rel="stylesheet" href="css/animations.css">                                             <!-- Animation style -->
+<link rel="stylesheet" href="css/weather-icons.min.css">
 <!-- font list is here https://erikflowers.github.io/weather-icons/ -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -66,36 +66,30 @@
                                                 <p class="user-text">Please chose your name.</p>
                                                 <div class="row">
                                                       <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="/img/baby_1.png" class="user-img margin-b-20" width=100>
+                                                            <img src="img/baby_1.png" class="user-img margin-b-20" width=100>
                                                       </div>
                                                       <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user">Keisei</em>
-                                                            <u>Level.4</u>
+                                                            <em class="font-user"><?php echo($customer[1]['name']) ?></em>
+                                                            <u><?php echo("Level." . $customer[1]['level']) ?></u>
                                                       </div>
 
                                                       <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="/img/baby_2.png" class="user-img margin-b-20" width=100>
+                                                            <img src="img/baby_2.png" class="user-img margin-b-20" width=100>
                                                       </div>
 
                                                       <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user">Kwon</em>
-                                                            <u>Level.10</u>
+                                                            <em class="font-user"><?php echo($customer[2]['name']) ?></em>
+                                                            <u><?php echo("Level." . $customer[2]['level']) ?></u>
                                                       </div>
                                                 </div>
                                                 <div class="row">
                                                       <div class="col-xs-6 user-info">
                                                             <table class="table table-hover">
                                                                   <tr>
-                                                                        <td> Number of playing</td><td>10</td>
+                                                                        <td> Number of playing</td><td><?php echo($customer[1]['play_count']) ?></td>
                                                                   </tr>
                                                                   <tr>
-                                                                        <td> Average play price</td>  <td>14,000yen</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Average start time</td>  <td>7:00</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Address</td>  <td>Kanagawa</td>
+                                                                        <td> Address</td>  <td><?php echo($customer[1]['address']) ?></td>
                                                                   </tr>
                                                             </table>
                                                       </div>
@@ -103,55 +97,51 @@
                                                       <div class="col-xs-6 user-info">
                                                             <table class="table table-hover">
                                                                   <tr>
-                                                                        <td> Number of playing</td><td>10</td>
+                                                                        <td> Number of playing</td><td><?php echo($customer[2]['play_count']) ?></td>
                                                                   </tr>
                                                                   <tr>
-                                                                        <td> Average play price</td>  <td>14,000yen</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Average start time</td>  <td>7:00</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Address</td>  <td>Kanagawa</td>
+                                                                        <td> Adress</td>  <td><?php echo($customer[2]['address']) ?></td>
                                                                   </tr>
                                                             </table>
                                                       </div>
                                                 </div>
                                                 <div class="row">
                                                       <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="/img/baby_4.png" class="user-img margin-b-20" width=100>
+                                                            <img src="img/baby_4.png" class="user-img margin-b-20" width=100>
                                                       </div>
                                                       <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user">Moise</em>
-                                                            <u>Level.3</u>
+                                                            <em class="font-user"><?php echo($customer[3]['name']) ?></em>
+                                                            <u><?php echo("Level." . $customer[3]['level']) ?></u>
                                                       </div>
 
                                                       <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="/img/baby_3.png" class="user-img margin-b-20" width=100>
+                                                            <img src="img/baby_3.png" class="user-img margin-b-20" width=100>
                                                       </div>
                                                       <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user">New</em>
+                                                            <em class="font-user"><?php echo($customer[4]['name']) ?></em>
+                                                            <u><?php echo("Level." . $customer[4]['level']) ?></u>
                                                       </div>
                                                       </div>
                                                       <div class="row">
                                                             <div class="col-xs-6 user-info">
                                                                   <table class="table table-hover">
                                                                         <tr>
-                                                                              <td> Number of playing</td><td>10</td>
+                                                                              <td> Number of playing</td><td><?php echo($customer[3]['play_count']) ?></td>
                                                                         </tr>
                                                                         <tr>
-                                                                              <td> Average play price</td>  <td>14,000yen</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                              <td> Average start time</td>  <td>7:00</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                              <td> Address</td>  <td>Kanagawa</td>
+                                                                              <td> Address</td>  <td><?php echo($customer[3]['address']) ?></td>
                                                                         </tr>
                                                                   </table>
                                                             </div>
                                                             <div class="col-xs-6 user-info">
-                                                                  
+                                                                   <table class="table table-hover">
+                                                                        <tr>
+                                                                              <td> Number of playing</td><td><?php echo($customer[4]['play_count']) ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                              <td> Address</td>  <td><?php echo($customer[4]['address']) ?></td>
+                                                                        </tr>
+                                                                  </table>        
                                                             </div>
                                                       </div>
                                                 </div>
@@ -167,7 +157,7 @@
                                     <section data-page-id="page-2" class="content content-gallery js-content">
 
                                           <header class="box box-green margin-b-20">
-                                               <h2 class="box-text page-title-text"><img src="/img/baby_1.png" width=60>The best cource for Keisei <i class="wi wi-small-craft-advisory"></i></h2>
+                                               <h2 class="box-text page-title-text"><img src="img/baby_1.png" width=60>The best cource for Keisei <i class="wi wi-small-craft-advisory"></i></h2>
                                          </header>
 
                                          <div class="content-text content-text-gallery">
@@ -246,10 +236,10 @@
             	</div><!-- /#preloader -->      
 
             	<!-- load JS files -->
-            	<script src="/js/jquery-1.11.3.min.js"></script> <!-- jQuery -->
-            	<script src="/js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
-            	<script src="/js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
-            	<script src="/js/templatemo-script.js"></script> <!-- Templatemo scripts -->
+            	<script src="js/jquery-1.11.3.min.js"></script> <!-- jQuery -->
+            	<script src="js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
+            	<script src="js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
+            	<script src="js/templatemo-script.js"></script> <!-- Templatemo scripts -->
                   <script>
                         $('.user').click(function(){
                               $(this).addClass("pulse");

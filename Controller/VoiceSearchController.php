@@ -28,7 +28,7 @@ class VoiceSearchController
                 $this->view->display("VoiceSearch/search.tpl");
             }
 */
-$transcript = "千葉のゴルフ場朝から";
+$transcript = "東京のゴルフ場朝から";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
             $divided_words = $nlc->divideWordsByIgo($transcript);
@@ -38,7 +38,6 @@ $transcript = "千葉のゴルフ場朝から";
             $gora_plan = new GoraPlanSearch();
             $params = $gora_plan->setParam($class_results);
             $gora_result = $gora_plan->getPlan($params);
-
             $plan_info_array = [];
             $course_id_array = [];
             $destination = [];
@@ -48,15 +47,17 @@ $transcript = "千葉のゴルフ場朝から";
             foreach ($gora_result['Items'] as $key => $item) {
                 if (!empty($item['Item']['planInfo'])) {
                     foreach ($item['Item']['planInfo'] as $plan) {
-                        $plan_info_array[$plan['plan']['planId']] = $plan['plan'];
-                        $plan_info_array[$plan['plan']['planId']]['golfCourseId'] = $item['Item']['golfCourseId'];
+                        if (!empty($plan['plan']['startTimeZone'])) {
+                            $plan_info_array[$plan['plan']['planId']] = $plan['plan'];
+                            $plan_info_array[$plan['plan']['planId']]['golfCourseId'] = $item['Item']['golfCourseId'];
+                            $course_id_array[$item['Item']['golfCourseId']] = $item['Item']['golfCourseId'];
+                            $destination[$item['Item']['golfCourseId']]['from'] = "東京";
+                            $course_name = preg_replace("/(\(|（).*(\)|）)/","",$item['Item']['golfCourseName']);
+                            $course_name = preg_replace("/【(.*?)】/","",$course_name);
+                            $destination[$item['Item']['golfCourseId']]['to'] = $course_name;
+                            $i++;
+                        }
                     }
-                    $course_id_array[$item['Item']['golfCourseId']] = $item['Item']['golfCourseId'];
-                    $destination[$item['Item']['golfCourseId']]['from'] = "東京";
-                    $course_name = preg_replace("/(\(|（).*(\)|）)/","",$item['Item']['golfCourseName']);
-                    $course_name = preg_replace("/【(.*?)】/","",$course_name);
-                    $destination[$item['Item']['golfCourseId']]['to'] = $course_name;
-                    $i++;
                 }
                 if ($i == 5) {
                     break;
@@ -75,12 +76,15 @@ $transcript = "千葉のゴルフ場朝から";
                 $trade_off_data[$plan_id]['price'] = $plan_info['price'];
                 
                 // TODO make function to get time
-                $trade_off_data[$plan_id]['time'] = $course_info[$plan_info['golfCourseId']]['time'];
+                $trade_off_data[$plan_id]['distance'] = $course_info[$plan_info['golfCourseId']]['time'];
                 
                 // TODO make function to get weather
                 $trade_off_data[$plan_id]['weather'] = $course_info[$plan_info['golfCourseId']]['weather'];
-            }
 
+                $time = preg_replace("/時台/","",$plan_info['startTimeZone']);
+                $time = preg_replace("/、/",",",$time);
+                $trade_off_data[$plan_id]['time'] = $time;
+            }
             //Run tradeoff
             $recommend_plan_id = $plan_id;
             /* 

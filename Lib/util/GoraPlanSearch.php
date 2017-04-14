@@ -35,7 +35,7 @@ class GoraPlanSearch {
 
     public function setParam($data)
     {
-        $params = ['areaCode'=> 13,'playDate' => date("Y-m-d",strtotime("+1 week"))];
+        $params = ['areaCode'=> 13,'playDate' => date("Y-m-d",strtotime("+2 week"))];
  
         foreach ($data as $key => $value) {
             switch ($key) {
@@ -67,7 +67,7 @@ class GoraPlanSearch {
             case "twomonth":
                 $param = date("Y-m-d",strtotime("+2 month"));
             default:
-                $param = date("Y-m-d",strtotime("+1 week"));
+                $param = date("Y-m-d",strtotime("+2 week"));
         }
 
         return $param;

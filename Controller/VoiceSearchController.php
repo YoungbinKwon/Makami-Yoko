@@ -15,10 +15,11 @@ class VoiceSearchController
 
     public function searchAction()
     {
-/*        if (isset($_POST["audio"])) {
+        if (isset($_POST["audio"])) {
             //Get text from voice
             $voice_result = $stt->getText($_POST["audio"]);
             $results = $voice_result->results;
+            var_dump($result);
 
             if ($results[0]->alternatives) {
                 $alternatives = $results[0]->alternatives;
@@ -27,7 +28,7 @@ class VoiceSearchController
                 echo('もう一度お願いします。');
                 $this->view->display("VoiceSearch/search.tpl");
             }
-*/
+
 $transcript = "東京のゴルフ場朝から";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
@@ -102,7 +103,7 @@ $transcript = "東京のゴルフ場朝から";
             $display_data['course'] = $course_info;
 var_dump($display_data);
             $this->view->class_results = $class_results;
-//        }
+ }
 
         $this->view->display("VoiceSearch/search.tpl");
     }

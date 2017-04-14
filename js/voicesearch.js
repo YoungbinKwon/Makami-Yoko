@@ -1,4 +1,14 @@
 var recordingFlag = false;
+
+function setStart() {
+    recordingFlag = true;
+    recordStart();
+}
+
+function setEnd() {
+    recordingFlag = false;
+}
+
 document.querySelector('.start').addEventListener('click', function() {
     recordingFlag = true;
     recordStart();
@@ -38,9 +48,11 @@ function recordStart() {
             setTimeout(function(){
                 stream.getTracks()[0].stop();
 
-                var blob = exportWAV(audioBufferArray, audioContext.sampleRate)
+                var blob = exportWAV(audioBufferArray, audioContext.sampleRate);
                 var reader = new window.FileReader();
+                
                 reader.readAsDataURL(blob);
+
                 reader.onloadend = function() {
                     var request = $.ajax({
                         url: '/voicesearch/search/',
@@ -53,6 +65,10 @@ function recordStart() {
                     request.done(function(data) {
                         $(".result").val($(".result").val() + data);
                     });
+                    /*alert(reader.result);
+                    $(':hidden[name=audio]').val(reader.result);
+                    $('form').submit();*/
+
                 };
 
                 if (recordingFlag) {

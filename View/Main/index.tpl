@@ -240,11 +240,11 @@
            </form>
 
             	<!-- load JS files -->
-            	<script src="js/jquery-1.11.3.min.js"></script> <!-- jQuery -->
-            	<script src="js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
-            	<script src="js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
-            	<script src="js/templatemo-script.js"></script> <!-- Templatemo scripts -->
-                <script type="text/javascript" src="../../js/voicesearch.js"></script>
+            	<script src="/js/jquery-1.11.3.min.js"></script> <!-- jQuery -->
+            	<script src="/js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
+            	<script src="/js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
+            	<script src="/js/templatemo-script.js"></script> <!-- Templatemo scripts -->
+                <script type="text/javascript" src="/js/voicesearch.js"></script>
                   <script>
                         $('.user').click(function(){
                               $(this).addClass("pulse");
@@ -258,7 +258,7 @@
                               var audio = $("<audio autoplay></audio>", {
                                 });
                               var source = $("<source>", {
-                                "src"  : "<?php echo $result_text; ?>",
+                                "src" : "<?php echo $result_text; ?>",
                                 "type" : "audio/wav"
                                     });
                               audio.append(source);

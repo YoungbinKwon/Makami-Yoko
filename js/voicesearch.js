@@ -8,7 +8,7 @@ function setStart() {
 function setEnd() {
     recordingFlag = false;
 }
-
+/*
 document.querySelector('.start').addEventListener('click', function() {
     recordingFlag = true;
     recordStart();
@@ -17,7 +17,7 @@ document.querySelector('.start').addEventListener('click', function() {
 document.querySelector('.end').addEventListener('click', function() {
     recordingFlag = false;
 });
-
+*/
 var audioContext = new AudioContext();
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
@@ -54,7 +54,7 @@ function recordStart() {
                 reader.readAsDataURL(blob);
 
                 reader.onloadend = function() {
-                    var request = $.ajax({
+                    /*var request = $.ajax({
                         url: '/voicesearch/search/',
                         method: 'post',
                         data: {
@@ -64,10 +64,9 @@ function recordStart() {
 
                     request.done(function(data) {
                         $(".result").val($(".result").val() + data);
-                    });
-                    /*alert(reader.result);
+                    });*/
                     $(':hidden[name=audio]').val(reader.result);
-                    $('form').submit();*/
+                    $('form').submit();
 
                 };
 

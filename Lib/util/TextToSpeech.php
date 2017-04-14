@@ -10,6 +10,7 @@ class TextToSpeech {
 
     public function getAudio($text)
     {
+        urlencode($text);
         try {
         $url = "https://".
             $this->username . ":".

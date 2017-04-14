@@ -307,6 +307,8 @@ p:last-child { margin-bottom: 0; }
 	bottom: 100px;
 }
 
+.box-green{background-color:rgba(130, 169, 0, 0.7);}
+.box-darkgreen{background-color:rgba(65, 84, 0, 0.7);}
 
 /* Media Queries */
 

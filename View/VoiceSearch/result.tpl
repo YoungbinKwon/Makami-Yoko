@@ -34,7 +34,7 @@
            <!-- background images -->
            <div class="page-bg-imgs-list">
                 <img src="https://cdn.pixabay.com/photo/2016/10/21/13/53/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
-                <img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/01_01.jpg" id="page-2-img" alt="Gallery">
+                <img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/01_01.jpg')?>" id="page-2-img" alt="Gallery">
 
           </div>
 
@@ -187,7 +187,7 @@
                                                          <th><?php echo(date('D,d (M)' ,strtotime($results['plan']['callInfo']['playDate']))) ?> <i class="wi wi-day-cloudy"></i></th>
                                                          <th><a  href="<?php echo('https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/' . $results['course']['Item']['golfCourseId']) ?>"><?php echo($results['course']['Item']['golfCourseName']) ?></a></th>
                                                          <th><a href="<?php echo('https://search.gora.golf.rakuten.co.jp//?menu=compe&act=detail&plan_id=' . $results['plan']['planId']) ?>"><?php echo($results['plan']['planName']) ?></a></th>
-                                                         <th><?php echo($results['plan']['startTimeZone']) ?></th>
+                                                         <th><?php echo($results['time'] . '時台') ?></th>
                                                          <th><?php echo(number_format($results['plan']['price']) . 'yen') ?></th>
                                                    </tr>
                                              </tbody>

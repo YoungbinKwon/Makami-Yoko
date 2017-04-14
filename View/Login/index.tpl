@@ -33,7 +33,7 @@
 
            <!-- background images -->
            <div class="page-bg-imgs-list">
-                <img src="https://cdn.pixabay.com/photo/2016/10/21/13/53/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
+                <img src="img/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
                 <img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/01_01.jpg" id="page-2-img" alt="Gallery">
 
           </div>

@@ -241,7 +241,6 @@
 
             	<!-- load JS files -->
             	<script src="js/jquery-1.11.3.min.js"></script> <!-- jQuery -->
-                <script src="js/jquery.redirect.js"></script>
             	<script src="js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
             	<script src="js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
             	<script src="js/templatemo-script.js"></script> <!-- Templatemo scripts -->

@@ -50,7 +50,7 @@ function recordStart() {
 
                 var blob = exportWAV(audioBufferArray, audioContext.sampleRate);
                 var reader = new window.FileReader();
-                
+
                 reader.readAsDataURL(blob);
 
                 reader.onloadend = function() {

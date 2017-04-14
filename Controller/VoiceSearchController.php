@@ -16,10 +16,10 @@ class VoiceSearchController
     public function searchAction()
     {
         if (isset($_POST["audio"])) {
+            $stt = new SpeechToText();
             //Get text from voice
             $voice_result = $stt->getText($_POST["audio"]);
             $results = $voice_result->results;
-            var_dump($result);
 
             if ($results[0]->alternatives) {
                 $alternatives = $results[0]->alternatives;
@@ -28,7 +28,7 @@ class VoiceSearchController
                 echo('もう一度お願いします。');
                 $this->view->display("VoiceSearch/search.tpl");
             }
-
+            $this->view->display("VoiceSearch/search.tpl");
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
             $divided_words = $nlc->divideWordsByIgo($transcript);
@@ -100,7 +100,6 @@ class VoiceSearchController
             //Make parameters for display
             $display_data['plan'] = $plan_info_array[$plan_id];
             $display_data['course'] = $course_info;
-var_dump($display_data);
             $this->view->class_results = $class_results;
  }
 
@@ -108,10 +107,13 @@ var_dump($display_data);
     }
 
     public function resultAction(){
-/*        if (isset($_POST["audio"])) {
+        if (isset($_POST["audio"])) {
             //Get text from voice
+            $stt = new SpeechToText();
             $voice_result = $stt->getText($_POST["audio"]);
+            exit;
             $results = $voice_result->results;
+
 
             if ($results[0]->alternatives) {
                 $alternatives = $results[0]->alternatives;
@@ -120,7 +122,7 @@ var_dump($display_data);
                 echo('もう一度お願いします。');
                 $this->view->display("VoiceSearch/search.tpl");
             }
-*/
+
 $transcript = "東京のゴルフ場朝から";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
@@ -194,7 +196,7 @@ $transcript = "東京のゴルフ場朝から";
             $display_data['plan'] = $plan_info_array[$plan_id];
             $display_data['course'] = $course_info;
             $this->view->results = $display_data;
-//        }
+        }
 
 
         $this->view->display("VoiceSearch/result.tpl");

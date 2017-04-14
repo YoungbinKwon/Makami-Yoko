@@ -13,11 +13,11 @@
 <!-- load stylesheets -->
 <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Neucha|Sigmar+One|Basic" rel="stylesheet">
 <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
-<link rel="stylesheet" href="css/bootstrap.min.css">                                                <!-- Bootstrap style -->
-<link rel="stylesheet" href="css/flexslider.css">                                                   <!-- Flexslider style -->       
-<link rel="stylesheet" href="css/templatemo-style.css">                                             <!-- Templatemo style -->
-<link rel="stylesheet" href="css/animations.css">                                             <!-- Animation style -->
-<link rel="stylesheet" href="css/weather-icons.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">                                                <!-- Bootstrap style -->
+<link rel="stylesheet" href="/css/flexslider.css">                                                   <!-- Flexslider style -->       
+<link rel="stylesheet" href="/css/templatemo-style.css">                                             <!-- Templatemo style -->
+<link rel="stylesheet" href="/css/animations.css">                                             <!-- Animation style -->
+<link rel="stylesheet" href="/css/weather-icons.min.css">
 <!-- font list is here https://erikflowers.github.io/weather-icons/ -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -33,7 +33,7 @@
 
            <!-- background images -->
            <div class="page-bg-imgs-list">
-                <img src="img/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
+                <img src="/img/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
                 <img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/01_01.jpg" id="page-2-img" alt="Gallery">
 
           </div>
@@ -106,7 +106,7 @@
                                                 <p class="user-text">Please chose your name.</p>
                                                 <div class="row">
                                                       <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="img/baby_1.png" class="user-img margin-b-20" width=100>
+                                                            <img src="/img/baby_1.png" class="user-img margin-b-20" width=100>
                                                       </div>
                                                       <div class="margin-t-50 col-xs-3 user-info">
                                                             <em class="font-user">Keisei</em>
@@ -114,7 +114,7 @@
                                                       </div>
 
                                                       <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="img/baby_2.png" class="user-img margin-b-20" width=100>
+                                                            <img src="/img/baby_2.png" class="user-img margin-b-20" width=100>
                                                       </div>
 
                                                       <div class="margin-t-50 col-xs-3 user-info">
@@ -159,7 +159,7 @@
                                                 </div>
                                                 <div class="row">
                                                       <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="img/baby_4.png" class="user-img margin-b-20" width=100>
+                                                            <img src="/img/baby_4.png" class="user-img margin-b-20" width=100>
                                                       </div>
                                                       <div class="margin-t-50 col-xs-3 user-info">
                                                             <em class="font-user">Moise</em>
@@ -167,7 +167,7 @@
                                                       </div>
 
                                                       <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="img/baby_3.png" class="user-img margin-b-20" width=100>
+                                                            <img src="/img/baby_3.png" class="user-img margin-b-20" width=100>
                                                       </div>
                                                       <div class="margin-t-50 col-xs-3 user-info">
                                                             <em class="font-user">New</em>
@@ -207,7 +207,7 @@
                                     <section data-page-id="page-2" class="content content-gallery js-content">
 
                                           <header class="box box-green margin-b-20">
-                                               <h2 class="box-text page-title-text"><img src="img/baby_1.png" width=60>The best cource for Keisei <i class="wi wi-small-craft-advisory"></i></h2>
+                                               <h2 class="box-text page-title-text"><img src="/img/baby_1.png" width=60>The best cource for Keisei <i class="wi wi-small-craft-advisory"></i></h2>
                                          </header>
 
                                          <div class="content-text content-text-gallery">
@@ -341,10 +341,10 @@
             	</div><!-- /#preloader -->      
 
             	<!-- load JS files -->
-            	<script src="js/jquery-1.11.3.min.js"></script> <!-- jQuery -->
-            	<script src="js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
-            	<script src="js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
-            	<script src="js/templatemo-script.js"></script> <!-- Templatemo scripts -->
+            	<script src="/js/jquery-1.11.3.min.js"></script> <!-- jQuery -->
+            	<script src="/js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
+            	<script src="/js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
+            	<script src="/js/templatemo-script.js"></script> <!-- Templatemo scripts -->
                   <script>
                         $('.user').click(function(){
                               $(this).addClass("pulse");

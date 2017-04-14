@@ -13,11 +13,11 @@
 <!-- load stylesheets -->
 <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Neucha|Sigmar+One|Basic" rel="stylesheet">
 <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
-<link rel="stylesheet" href="css/bootstrap.min.css">                                                <!-- Bootstrap style -->
-<link rel="stylesheet" href="css/flexslider.css">                                                   <!-- Flexslider style -->       
-<link rel="stylesheet" href="css/templatemo-style.css">                                             <!-- Templatemo style -->
-<link rel="stylesheet" href="css/animations.css">                                             <!-- Animation style -->
-<link rel="stylesheet" href="css/weather-icons.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">                                                <!-- Bootstrap style -->
+<link rel="stylesheet" href="/css/flexslider.css">                                                   <!-- Flexslider style -->       
+<link rel="stylesheet" href="/css/templatemo-style.css">                                             <!-- Templatemo style -->
+<link rel="stylesheet" href="/css/animations.css">                                             <!-- Animation style -->
+<link rel="stylesheet" href="/css/weather-icons.min.css">
 <!-- font list is here https://erikflowers.github.io/weather-icons/ -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -33,7 +33,7 @@
 
            <!-- background images -->
            <div class="page-bg-imgs-list">
-                <img src="https://cdn.pixabay.com/photo/2016/10/21/13/53/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
+                <img src="/img/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
                 <img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/01_01.jpg" id="page-2-img" alt="Gallery">
 
           </div>

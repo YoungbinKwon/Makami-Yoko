@@ -184,11 +184,11 @@
                                                    </thread>
                                                    <tbody>
                                                     <tr>
-                                                         <th>17th Mar (Fri) <i class="wi wi-day-cloudy"></i></th>
-                                                         <th><a  href="https://gora.golf.rakuten.co.jp">island golf cource</a></th>
-                                                         <th><a href="https://gora.golf.rakuten.co.jp">Special plan</a></th>
-                                                         <th>9:37</th>
-                                                         <th>4,000yen</th>
+                                                         <th><?php echo(date('D,d (M)' ,strtotime($results['plan']['callInfo']['playDate']))) ?> <i class="wi wi-day-cloudy"></i></th>
+                                                         <th><a  href="<?php echo('https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/' . $results['course']['Item']['golfCourseId']) ?>"><?php echo($results['course']['Item']['golfCourseName']) ?></a></th>
+                                                         <th><a href="<?php echo('https://search.gora.golf.rakuten.co.jp//?menu=compe&act=detail&plan_id=' . $results['plan']['planId']) ?>"><?php echo($results['plan']['planName']) ?></a></th>
+                                                         <th><?php echo($results['plan']['startTimeZone']) ?></th>
+                                                         <th><?php echo(number_format($results['plan']['price']) . 'yen') ?></th>
                                                    </tr>
                                              </tbody>
                                        </table>
@@ -198,23 +198,24 @@
 
                                         <div id="slider" class="flexslider">
                                              <ul class="slides">
-                                                  <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c0/01.jpg" alt="Slide 1" /></li>
-                                                  <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c0/05.jpg" /></li>
-                                                  <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/01_03.jpg" /></li>
-                                                  <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/02_02.jpg" /></li>
-                                                  <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/04_03.jpg" /></li>
-                                                  <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/06_01.jpg" /></li>
+                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c0/01.jpg')?>" alt="Slide 1" /></li>
+                                                  <li><img src= "<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c0/02.jpg')?>" /></li>
+                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/01_01.jpg')?>" /></li>
+                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/02_01.jpg')?>" /></li>
+                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/03_01.jpg')?>" /></li>
+                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/04_01.jpg')?>" /></li>
                                             </ul>
                                       </div> <!-- #slider -->
 
                                       <div id="carousel" class="flexslider">
                                        <ul class="slides">
-                                            <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c0/01.jpg" alt="Thumbnail 1" /></li>
-                                            <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c0/05.jpg" alt="Thumbnail 2" /></li>
-                                            <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/01_03.jpg" alt="Thumbnail 3" /></li>
-                                            <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/02_02.jpg" alt="Thumbnail 4" /></li>
-                                            <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/04_03.jpg" alt="Thumbnail 5" /></li>
-                                            <li><img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/06_01.jpg" alt="Thumbnail 6" /></li>
+                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c0/01.jpg')?>" alt="Thumbnail 1" /></li>
+                                           <li><img src= "<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c0/02.jpg')?>" alt="Thumbnail 2"/></li>
+                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/01_01.jpg')?>" alt="Thumbnail 3"/></li>
+                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/02_01.jpg')?>" alt="Thumbnail 4"/></li>
+                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/03_01.jpg')?>" alt="Thumbnail 5"/></li>
+                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/04_01.jpg')?>" /lt="Thumbnail 6"></li>
+                                           
                                       </ul>
                                 </div>  <!-- #carousel -->
 

@@ -17,6 +17,7 @@ class VoiceSearchController
     {
         if (isset($_POST["audio"])) {
             $stt = new SpeechToText();
+var_dump($stt);
             //Get text from voice
             $voice_result = $stt->getText($_POST["audio"]);
             $results = $voice_result->results;
@@ -28,6 +29,8 @@ class VoiceSearchController
                 echo('もう一度お願いします。');
                 $this->view->display("VoiceSearch/search.tpl");
             }
+var_dump($results);
+$this->view->display("VoiceSearch/search.tpl");
 
 $transcript = "福岡県朝からゴルフ来月";
 
@@ -124,7 +127,7 @@ $transcript = "福岡県朝からゴルフ来月";
                 $this->view->display("VoiceSearch/search.tpl");
             }
 */
-$transcript = "福岡のゴルフ場朝から";
+$transcript = "千葉のゴルフ場朝から";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
             $divided_words = $nlc->divideWordsByIgo($transcript);
@@ -153,7 +156,7 @@ $transcript = "福岡のゴルフ場朝から";
                             $i++;
                     }
                 }
-                if ($i == 5) {
+                if ($i >= 10) {
                     break;
                 }
             }
@@ -175,30 +178,31 @@ $transcript = "福岡のゴルフ場朝から";
                 // TODO make function to get weather
                 $trade_off_data[$plan_id]['weather'] = $course_info[$plan_info['golfCourseId']]['weather'];
                 
-                if (isset($plan_info['startTimeZone'])) {
+                if (!empty($plan_info['startTimeZone'])) {
                     $time = preg_replace("/時台/","",$plan_info['startTimeZone']);
                     $time = preg_replace("/、/",",",$time);
                     $trade_off_data[$plan_id]['time'] = $time;
                 } else {
-                    $trade_off_data[$plan_id]['time'] = rand(5, 15);
+                    $trade_off_data[$plan_id]['time'] = 10;
                 }
             }
-
-            //Run tradeoff
-            $recommend_plan_id = $plan_id;
-            /* 
-            TODO make tradeoff
             $trade_off = new Tradeoff();
-            $recommend_plan_id = $trade_off->getRecommendPlan($trade_off_data);
-            */
+            $trade_off_results = $trade_off->getPlanByTradeOff($trade_off_data);
+
+            $recommend_value = explode('_', $trade_off_results['Preferable_List'][0]);
+            $recommend_plan_id = $recommend_value[0];
+
+
 
             //Get golf course detail to show
             $gora_course = new GoraCourseDetail();
             $course_info = $gora_course->getCourseDetail($plan_info_array[$recommend_plan_id]['golfCourseId']);
 
             //Make parameters for display
-            $display_data['plan'] = $plan_info_array[$plan_id];
+            $display_data['plan'] = $plan_info_array[$recommend_plan_id];
             $display_data['course'] = $course_info;
+            $display_data['time'] = $recommend_value[1];
+
             $this->view->results = $display_data;
 //        }
 

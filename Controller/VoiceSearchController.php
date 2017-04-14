@@ -17,7 +17,6 @@ class VoiceSearchController
 
     public function searchAction()
     {
-        $tts = new TextToSpeech();
         if (isset($_POST["audio"])) {
             $stt = new SpeechToText();
             $voice_result = $stt->getText($_POST["audio"]);
@@ -37,7 +36,6 @@ class VoiceSearchController
             //$this->view->top_class = $result['classes'][0]['class_name'];
 
         }
-        $this->view->result_text = $tts->getAudio("予約したいゴルフ場の情報を教えてください。");
         $this->view->display("VoiceSearch/search.tpl");
     }
 

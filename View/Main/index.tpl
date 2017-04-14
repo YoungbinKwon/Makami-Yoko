@@ -233,13 +233,19 @@
 
             	<div id="preloader">
             		<div id="status">&nbsp;</div>
-            	</div><!-- /#preloader -->      
+            	</div><!-- /#preloader -->
+
+           <form action="/voicesearch/result" method="post">
+               <input type="hidden" name="audio" value="" />
+           </form>
 
             	<!-- load JS files -->
             	<script src="js/jquery-1.11.3.min.js"></script> <!-- jQuery -->
+                <script src="js/jquery.redirect.js"></script>
             	<script src="js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
             	<script src="js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
             	<script src="js/templatemo-script.js"></script> <!-- Templatemo scripts -->
+                <script type="text/javascript" src="../../js/voicesearch.js"></script>
                   <script>
                         $('.user').click(function(){
                               $(this).addClass("pulse");
@@ -250,9 +256,22 @@
                               $(".user-text").empty();
                               $(".user-text-under").text("　");
                               $(".user-info").empty();
-                              //$(".selected").text("background","white")
-                        });
-                  </script>
+                              var audio = $("<audio autoplay></audio>", {
+                                });
+                              var source = $("<source>", {
+                                "src"  : "<?php echo $result_text; ?>",
+                                "type" : "audio/wav"
+                                    });
+                              audio.append(source);
+                              $(this).append(audio);
 
+                            setTimeout(function(){
+                                setStart();
+                            }, 3000);
+                            setTimeout(function() {
+                                setEnd();
+                            }, 7000);
+                        });
+                 </script>
             </body>
             </html>

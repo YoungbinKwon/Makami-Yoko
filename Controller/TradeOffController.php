@@ -72,6 +72,33 @@ class TradeOffController
         }
 
         /*================================================= */
+        $TimerVal = new Time_function();
+        foreach ($Tradeoff_data as $key => $value)
+        {
+
+            $num= explode(",", $value['time']);
+            for ($i = 0; $i < count($num); $i++){
+                $js_price = $value['price'];
+                $js_weather = $value['weather'];
+                $js_distance = $value['distance'];
+                $js_time = $TimerVal->getTimeValue($num[$i]);
+                $js_planId = $key;
+
+                $object_data = json_encode(
+                    array("price" => $js_price,
+                        "weather" => $js_weather,
+                        "distance" => $js_distance,
+                        "time" => $js_time
+                    ));
+
+                $items[] = array('key'=> $js_planId."_".$js_time, "values" =>json_decode($object_data));
+            }
+
+        }
+        $dilemma['columns']=$objective_items;
+        $dilemma['options'] = $items;
+
+        /*================================================= */
 
 
 
@@ -154,9 +181,11 @@ class TradeOffController
         $param['BestSolutionList'] = $bestSolution[$key]["planId"];
         $param['BestSolutionStatus'] = $bestSolution[$key]["status"];
 
+        $timeElement = new Time_function();
+        $param['Time_Value'] = $timeElement->getTimeValue(7);
+
         return $param;
     }
-
 
         public function indexAction(){
               $this->view->TradeOffResults = $this->UserTradeoffAPI();

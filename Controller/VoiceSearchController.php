@@ -15,9 +15,8 @@ class VoiceSearchController
 
     public function searchAction()
     {
-//        if (isset($_POST["audio"])) {
+/*        if (isset($_POST["audio"])) {
             //Get text from voice
-/*            $stt = new SpeechToText();
             $voice_result = $stt->getText($_POST["audio"]);
             $results = $voice_result->results;
 
@@ -29,7 +28,6 @@ class VoiceSearchController
                 $this->view->display("VoiceSearch/search.tpl");
             }
 */
-
 $transcript = "千葉のゴルフ場朝から";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
@@ -46,6 +44,7 @@ $transcript = "千葉のゴルフ場朝から";
             $destination = [];
 
             $i = 0;
+
             foreach ($gora_result['Items'] as $key => $item) {
                 if (!empty($item['Item']['planInfo'])) {
                     foreach ($item['Item']['planInfo'] as $plan) {
@@ -100,6 +99,7 @@ $transcript = "千葉のゴルフ場朝から";
 var_dump($display_data);
             $this->view->class_results = $class_results;
 //        }
+
         $this->view->display("VoiceSearch/search.tpl");
     }
 

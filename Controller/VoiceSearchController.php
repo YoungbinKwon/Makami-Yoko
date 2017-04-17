@@ -89,7 +89,7 @@ $divided_words = ['東京'];
                 $this->view->display("VoiceSearch/noresult.tpl");
                 exit();
             }
-
+            $gora_result = [];
             if ($i == 0) {
                 $tts = new TextToSpeech();
                 $this->view->result_text = $tts->getAudio("大変残念ながらご希望のプランはございませんでした");
@@ -123,6 +123,7 @@ $divided_words = ['東京'];
                     $trade_off_data[$plan_id]['time'] = 10;
                 }
             }
+exit();
             $trade_off = new Tradeoff();
             $trade_off_results = $trade_off->getPlanByTradeOff($trade_off_data);
 

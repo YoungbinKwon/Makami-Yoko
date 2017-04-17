@@ -21,9 +21,9 @@ class VoiceSearchController
     public function resultAction(){
         if (isset($_POST["audio"])) {
 
-            $user_id   = $_POST["userid"];
-            $customer  = new Customer();
-            $user_info = $customer->selectById($user_id);
+ //           $user_id   = $_POST["userid"];
+ //           $customer  = new Customer();
+ //           $user_info = $customer->selectById($user_id);
 $trade_off = new Tradeoff();
 exit();
             //Get text from voice

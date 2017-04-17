@@ -29,8 +29,7 @@ class VoiceSearchController
             $stt = new SpeechToText();
             $voice_result = $stt->getText($_POST["audio"]);
             $results = $voice_result->results;
-var_dump($results);
-exit();
+
             if ($results[0]->alternatives) {
                 $alternatives = $results[0]->alternatives;
                 $transcript = $alternatives[0]->transcript;
@@ -50,7 +49,8 @@ exit();
             } else {
                 $divided_words = [];
             }
-
+var_dump($divided_words);
+exit();
             $class_results = $nlc->classifyWords($divided_words);
             //Call Gora API and get plan
             $gora_plan = new GoraPlanSearch();

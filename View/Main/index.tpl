@@ -208,8 +208,8 @@
             		<div id="status">&nbsp;</div>
             	</div><!-- /#preloader -->
            <form action="/voicesearch/result" method="post">
-               <input type="hidden" name="audio" value="" />
                <input type="hidden" name="userid" id="userid" value="" />
+               <input type="hidden" name="audio" value="" />
            </form>
             	<!-- load JS files -->
             	<script src="/js/jquery-1.11.3.min.js"></script> <!-- jQuery -->

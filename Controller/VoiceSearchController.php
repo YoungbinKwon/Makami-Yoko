@@ -20,11 +20,9 @@ class VoiceSearchController
 
     public function resultAction(){
         if (isset($_POST["audio"])) {
-var_dump($_POST["userid"]);
-exit();
- //           $user_id   = $_POST["userid"];
- //           $customer  = new Customer();
- //           $user_info = $customer->selectById($user_id);
+            $user_id   = $_POST["userid"];
+            $customer  = new Customer();
+            $user_info = $customer->selectById($user_id);
             //Get text from voice
             $stt = new SpeechToText();
             $voice_result = $stt->getText($_POST["audio"]);
@@ -37,9 +35,12 @@ exit();
                 $transcript = "";
             }
 
-            $user_id   = 2;
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
+
+var_dump($user_info);
+exit();
+
 /*
 $transcript = "北海道のゴルフ場 明日";
             //Get parameters from text

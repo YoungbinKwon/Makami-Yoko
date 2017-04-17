@@ -17,18 +17,12 @@ class Customer extends DatabaseManager
 
     function selectById($id)
     {
-
-var_dump($id);
-exit();
         if (!isset($id)) {
             return array();
         }
         
         $id = $this->mysql->real_escape_string($id);
         $query = "SELECT * FROM customer where id = " . $id;
-
-var_dump($query);
-exit();
 
         $query_result = $this->mysql->query($query);
         $result = array();

@@ -20,7 +20,7 @@ class VoiceSearchController
 
     public function resultAction(){
         if (isset($_POST["audio"])) {
-var_dump($_POST);
+var_dump($_POST["userid"]);
 exit();
  //           $user_id   = $_POST["userid"];
  //           $customer  = new Customer();

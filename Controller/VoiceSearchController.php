@@ -104,7 +104,6 @@ $divided_words = ['東京'];
                 $course_info[$course_id]['weather'] = 100;
             }
 
-exit();
 
             $trade_off_data = [];
             foreach ($plan_info_array as $plan_id => $plan_info) {
@@ -127,6 +126,7 @@ exit();
             $trade_off = new Tradeoff();
             $trade_off_results = $trade_off->getPlanByTradeOff($trade_off_data);
 
+exit();
             $recommend_value = explode('_', $trade_off_results['Preferable_List'][0]);
             $recommend_plan_id = $recommend_value[0];
 

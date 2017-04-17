@@ -24,13 +24,13 @@ class VoiceSearchController
             $user_id   = $_POST["userid"];
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
-var_dump($user_info);
-exit();
+
             //Get text from voice
             $stt = new SpeechToText();
             $voice_result = $stt->getText($_POST["audio"]);
             $results = $voice_result->results;
-
+var_dump($results);
+exit();
             if ($results[0]->alternatives) {
                 $alternatives = $results[0]->alternatives;
                 $transcript = $alternatives[0]->transcript;

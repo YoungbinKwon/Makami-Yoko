@@ -24,7 +24,8 @@ class VoiceSearchController
             $user_id   = $_POST["userid"];
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
- 
+var_dump($user_info);
+exit();
             //Get text from voice
             $stt = new SpeechToText();
             $voice_result = $stt->getText($_POST["audio"]);

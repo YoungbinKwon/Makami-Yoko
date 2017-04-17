@@ -17,6 +17,7 @@ class TradeOff
 
     public function __construct()
     {
+exit();
         $this->model = new TradeOffModel();
         $this->view = new Template();
         $this->url = "https://gateway.watsonplatform.net/tradeoff-analytics/api/v1/dilemmas/";

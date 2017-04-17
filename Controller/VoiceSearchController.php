@@ -124,8 +124,9 @@ $divided_words = ['東京'];
                 }
             }
 
-exit();
             $trade_off = new Tradeoff();
+var_dump($trade_off_data);
+exit();
             $trade_off_results = $trade_off->getPlanByTradeOff($trade_off_data);
 
             $recommend_value = explode('_', $trade_off_results['Preferable_List'][0]);

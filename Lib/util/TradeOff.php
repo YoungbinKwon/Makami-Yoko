@@ -1,12 +1,5 @@
 <?php
-error_reporting(E_ALL);
 
-/**
- * Created by PhpStorm.
- * User: moise.convolbo
- * Date: 2017/04/12
- * Time: 16:57
- */
 class TradeOff
 {
     private $model;
@@ -33,8 +26,8 @@ var_dump($Tradeoff_data);
 exit();
         $endpoint_url = "https://gateway.watsonplatform.net/tradeoff-analytics/api/v1/dilemmas/?find_preferable_options=true";
         $credentials = [
-            "username" => TRADEOFFUSERNAME,// コピペする
-            "password" => TRADEOFFPASSWORD// コピペする
+            "username" => TRADEOFFUSERNAME,
+            "password" => TRADEOFFPASSWORD
         ];
         $credentials_text = "{$credentials['username']}: {$credentials['password']}";
 

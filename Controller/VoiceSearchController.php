@@ -24,8 +24,6 @@ class VoiceSearchController
  //           $user_id   = $_POST["userid"];
  //           $customer  = new Customer();
  //           $user_info = $customer->selectById($user_id);
-$trade_off = new TradeOff();
-exit();
             //Get text from voice
             $stt = new SpeechToText();
             $voice_result = $stt->getText($_POST["audio"]);
@@ -125,8 +123,7 @@ $divided_words = ['東京'];
                 }
             }
 
- //           $trade_off = new Tradeoff();
-exit();
+            $trade_off = new TradeOff();
             $trade_off_results = $trade_off->getPlanByTradeOff($trade_off_data);
 
             $recommend_value = explode('_', $trade_off_results['Preferable_List'][0]);

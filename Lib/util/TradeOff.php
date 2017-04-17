@@ -2,14 +2,14 @@
 
 class TradeOff
 {
-//    private $model;
-//    private $view;
-//    private $url;
-//    private $dilemmaFile;
+    private $model;
+    private $view;
+    private $url;
+    private $dilemmaFile;
 
     public function __construct()
     {
-/*
+
         $this->model = new TradeOffModel();
         $this->view = new Template();
         $this->url = "https://gateway.watsonplatform.net/tradeoff-analytics/api/v1/dilemmas/";
@@ -17,13 +17,11 @@ class TradeOff
         $this->url_base = 'https://gateway.watsonplatform.net/tradeoff-analytics/api';
         $this->username = TRADEOFFUSERNAME;
         $this->password = TRADEOFFPASSWORD;
-*/
+
     }
 
     public function getPlanByTradeOff($Tradeoff_data){
 
-var_dump($Tradeoff_data);
-exit();
         $endpoint_url = "https://gateway.watsonplatform.net/tradeoff-analytics/api/v1/dilemmas/?find_preferable_options=true";
         $credentials = [
             "username" => TRADEOFFUSERNAME,
@@ -99,7 +97,6 @@ exit();
         $dilemma['columns']=$objective_items;
         $dilemma['options'] = $items;
 
-exit();
        /*================================================= */
         $ch = curl_init($endpoint_url);
         curl_setopt($ch, CURLOPT_USERPWD, $credentials_text);

@@ -175,9 +175,9 @@ class VoiceSearchController
             $tts = new TextToSpeech();
 
             $this->view->result_text = $tts->getAudio($course_info['Item']['golfCourseNameKana'] . "の" . $plan_info_array[$recommend_plan_id]['planName']  . " が おすすめだよ " . " 予約いたしましょうか？");
-        }
+*/        }
 
-*/
+
 exit();
         $this->view->display("VoiceSearch/result.tpl");
     }

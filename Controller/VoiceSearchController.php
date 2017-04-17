@@ -29,7 +29,6 @@ class VoiceSearchController
             }
 
             $this->view->display("VoiceSearch/search.tpl");
-var_dump($results);
 $this->view->display("VoiceSearch/search.tpl");
 
 $transcript = "福岡県朝からゴルフ来月";

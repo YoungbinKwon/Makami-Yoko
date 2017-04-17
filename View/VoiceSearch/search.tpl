@@ -10,7 +10,7 @@
 <body>
     <div class="wrapper">
         <div>
-            <audio src="<?php echo $result_text; ?>" autoplay></audio>
+            <audio src="<?php echo $result_text; ?>" autoplay> </audio>
         </div>
         <div>
             <button type="button" class="start">start</button>

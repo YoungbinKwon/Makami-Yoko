@@ -96,7 +96,7 @@ $divided_words = ['東京'];
                 $this->view->display("VoiceSearch/noresult.tpl");
                 exit();
             }
-exit();
+
             //Make parameters for tradeoff
             $google_map = new GoogleMapApi();
             foreach ($course_id_array as $course_id) {

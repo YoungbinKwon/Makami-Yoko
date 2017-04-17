@@ -123,7 +123,6 @@ $divided_words = ['東京'];
                     $trade_off_data[$plan_id]['time'] = 10;
                 }
             }
-exit();
             $trade_off = new Tradeoff();
             $trade_off_results = $trade_off->getPlanByTradeOff($trade_off_data);
 

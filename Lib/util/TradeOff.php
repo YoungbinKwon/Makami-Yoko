@@ -134,7 +134,7 @@ class TradeOff
         $param['Confidence'] = $preferredList['score'];
         $param['BestSolutionList'] = $bestSolution[$key]["planId"];
         $param['BestSolutionStatus'] = $bestSolution[$key]["status"];
-
+exit();
         $timeElement = new Time_function();
         $param['Time_Value'] = $timeElement->getTimeValue(7);
 

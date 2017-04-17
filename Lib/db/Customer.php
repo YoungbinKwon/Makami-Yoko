@@ -17,6 +17,9 @@ class Customer extends DatabaseManager
 
     function selectById($id)
     {
+
+var_dump($id);
+exit();
         if (!isset($id)) {
             return array();
         }

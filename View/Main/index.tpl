@@ -207,7 +207,7 @@
             	<div id="preloader">
             		<div id="status">&nbsp;</div>
             	</div><!-- /#preloader -->
-           <form action="/voicesearch/result#page-2" method="post">
+           <form action="/voicesearch/result" method="post">
                <input type="hidden" name="audio" value="" />
                <input type="hidden" name="userid" id="userid" value="" />
            </form>

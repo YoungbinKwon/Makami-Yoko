@@ -33,8 +33,7 @@
 
            <!-- background images -->
            <div class="page-bg-imgs-list">
-                <img src="https://cdn.pixabay.com/photo/2016/10/21/13/53/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
-                <img src="<?php echo($results['image4'])?>" id="page-2-img" alt="Gallery">
+                <img src="<?php echo($results['image4'])?>" id="page-1-img" alt="Gallery">
 
           </div>
 
@@ -57,114 +56,10 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
                           <div class="content-wrapper js-content-wrapper">
-                               <!-- about -->
-                               <section data-page-id="page-1" class="content js-content">
-                                                <header class="box box-green margin-b-20">
-                                                     <h2 class="box-text page-title-text">Who are you?</h2>
-                                               </header>
-                                               <div class="content-text chose-user">
-                                                <p class="user-text">Please chose your name.</p>
-                                                <div class="row">
-                                                      <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="/img/baby_1.png" class="user-img margin-b-20" width=100>
-                                                      </div>
-                                                      <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user">Keisei</em>
-                                                            <u>Level.4</u>
-                                                      </div>
-
-                                                      <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="/img/baby_2.png" class="user-img margin-b-20" width=100>
-                                                      </div>
-
-                                                      <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user">Kwon</em>
-                                                            <u>Level.10</u>
-                                                      </div>
-                                                </div>
-                                                <div class="row">
-                                                      <div class="col-xs-6 user-info">
-                                                            <table class="table table-hover">
-                                                                  <tr>
-                                                                        <td> Number of playing</td><td>10</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Average play price</td>  <td>14,000yen</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Average start time</td>  <td>7:00</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Address</td>  <td>Kanagawa</td>
-                                                                  </tr>
-                                                            </table>
-                                                      </div>
-
-                                                      <div class="col-xs-6 user-info">
-                                                            <table class="table table-hover">
-                                                                  <tr>
-                                                                        <td> Number of playing</td><td>10</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Average play price</td>  <td>14,000yen</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Average start time</td>  <td>7:00</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                        <td> Address</td>  <td>Kanagawa</td>
-                                                                  </tr>
-                                                            </table>
-                                                      </div>
-                                                </div>
-                                                <div class="row">
-                                                      <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="/img/baby_4.png" class="user-img margin-b-20" width=100>
-                                                      </div>
-                                                      <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user">Moise</em>
-                                                            <u>Level.3</u>
-                                                      </div>
-
-                                                      <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="/img/baby_3.png" class="user-img margin-b-20" width=100>
-                                                      </div>
-                                                      <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user">New</em>
-                                                      </div>
-                                                      </div>
-                                                      <div class="row">
-                                                            <div class="col-xs-6 user-info">
-                                                                  <table class="table table-hover">
-                                                                        <tr>
-                                                                              <td> Number of playing</td><td>10</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                              <td> Average play price</td>  <td>14,000yen</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                              <td> Average start time</td>  <td>7:00</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                              <td> Address</td>  <td>Kanagawa</td>
-                                                                        </tr>
-                                                                  </table>
-                                                            </div>
-                                                            <div class="col-xs-6 user-info">
-                                                                  
-                                                            </div>
-                                                      </div>
-                                                </div>
-
-
-                                          </div>            
-
-                                    </section> <!-- #about -->
-
-
+                               
 
                                     <!-- gallery -->
-                                    <section data-page-id="page-2" class="content content-gallery js-content">
+                                    <section data-page-id="page-1" class="content content-gallery js-content">
 
                                           <header class="box box-green margin-b-20">
                                                <h2 class="box-text page-title-text"><img src="<?php echo($yoko_user['img'])?>" width=60><?php echo('The best cource for ' . $user_info['name'] . ' '); ?><i class="wi wi-small-craft-advisory"></i></h2>

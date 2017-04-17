@@ -20,7 +20,7 @@ class VoiceSearchController
 
     public function resultAction(){
         if (isset($_POST["audio"])) {
-/*
+
             $user_id   = $_POST["userid"];
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
@@ -40,7 +40,7 @@ class VoiceSearchController
             $user_id   = 2;
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
-
+/*
 $transcript = "北海道のゴルフ場 明日";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
@@ -50,6 +50,7 @@ $transcript = "北海道のゴルフ場 明日";
                 $divided_words = [];
             }
 */
+$nlc = new NaturalLanguageClassifier();
 $divided_words = ['東京'];
 
             $class_results = $nlc->classifyWords($divided_words);

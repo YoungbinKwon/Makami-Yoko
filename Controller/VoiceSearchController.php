@@ -20,7 +20,7 @@ class VoiceSearchController
 
     public function resultAction(){
         if (isset($_POST["audio"])) {
-/*
+
             $user_id   = $_POST["userid"];
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
@@ -37,6 +37,10 @@ class VoiceSearchController
                 $transcript = "";
             }
 
+var_dump($transcript);
+exit();
+
+/*
 //            $user_id   = 2;
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);

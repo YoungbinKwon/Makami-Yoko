@@ -103,6 +103,9 @@ $divided_words = ['東京'];
                 $course_info[$course_id]['time'] = $google_map->getDistance($destination[$course_id]['from'], $destination[$course_id]['to']);
                 $course_info[$course_id]['weather'] = 100;
             }
+
+exit();
+
             $trade_off_data = [];
             foreach ($plan_info_array as $plan_id => $plan_info) {
                 $trade_off_data[$plan_id]['price'] = $plan_info['price'];

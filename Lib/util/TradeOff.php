@@ -28,7 +28,8 @@ class TradeOff
 
     public function getPlanByTradeOff($Tradeoff_data){
 
-
+var_dump($Tradeoff_data);
+exit();
         $endpoint_url = "https://gateway.watsonplatform.net/tradeoff-analytics/api/v1/dilemmas/?find_preferable_options=true";
         $credentials = [
             "username" => TRADEOFFUSERNAME,// コピペする

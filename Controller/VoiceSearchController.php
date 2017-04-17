@@ -31,7 +31,7 @@ class VoiceSearchController
             $this->view->display("VoiceSearch/search.tpl");
 $this->view->display("VoiceSearch/search.tpl");
 
-$transcript = "福岡県朝からゴルフ来月";
+$transcript = "福岡県朝からゴルフ来月 ";
 
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();

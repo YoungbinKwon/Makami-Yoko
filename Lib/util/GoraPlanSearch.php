@@ -51,7 +51,6 @@ class GoraPlanSearch {
                     break;
             }
         }
-var_dump($params);
         return $params;
     }
 

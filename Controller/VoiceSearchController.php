@@ -37,13 +37,13 @@ class VoiceSearchController
                 $transcript = "";
             }
 
-var_dump($transcript);
-exit();
-
-/*
 //            $user_id   = 2;
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
+var_dump($user_info);
+exit();
+
+
 //$transcript = "北海道のゴルフ場 明日";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();

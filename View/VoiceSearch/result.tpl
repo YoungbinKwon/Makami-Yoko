@@ -34,7 +34,7 @@
            <!-- background images -->
            <div class="page-bg-imgs-list">
                 <img src="https://cdn.pixabay.com/photo/2016/10/21/13/53/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
-                <img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/01_01.jpg')?>" id="page-2-img" alt="Gallery">
+                <img src="<?php echo($results['image4'])?>" id="page-2-img" alt="Gallery">
 
           </div>
 
@@ -167,7 +167,7 @@
                                     <section data-page-id="page-2" class="content content-gallery js-content">
 
                                           <header class="box box-green margin-b-20">
-                                               <h2 class="box-text page-title-text"><img src="/img/baby_1.png" width=60>The best cource for Keisei <i class="wi wi-small-craft-advisory"></i></h2>
+                                               <h2 class="box-text page-title-text"><img src="<?php echo($yoko_user['img'])?>" width=60><?php echo('The best cource for ' . $user_info['name'] . ' '); ?><i class="wi wi-small-craft-advisory"></i></h2>
                                          </header>
 
                                          <div class="content-text content-text-gallery">
@@ -178,7 +178,7 @@
                                                                <th>Date</th>
                                                                <th>Cource name</th>
                                                                <th>Plan contents</th>
-                                                               <th>Start time</th>
+                                                               <th>Prefecture</th>
                                                                <th>Price</th>
                                                          </tr>
                                                    </thread>
@@ -187,34 +187,36 @@
                                                          <th><?php echo(date('D,d (M)' ,strtotime($results['plan']['callInfo']['playDate']))) ?> <i class="wi wi-day-cloudy"></i></th>
                                                          <th><a  href="<?php echo('https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/' . $results['course']['Item']['golfCourseId']) ?>"><?php echo($results['course']['Item']['golfCourseName']) ?></a></th>
                                                          <th><a href="<?php echo('https://search.gora.golf.rakuten.co.jp//?menu=compe&act=detail&plan_id=' . $results['plan']['planId']) ?>"><?php echo($results['plan']['planName']) ?></a></th>
-                                                         <th><?php echo($results['time'] . '時台') ?></th>
+                                                         <th><?php echo(substr($results['course']['Item']['address'],0,9)) ?></th>
                                                          <th><?php echo(number_format($results['plan']['price']) . 'yen') ?></th>
                                                    </tr>
                                              </tbody>
                                        </table>
-                                       <button type="button" class="btn btn-success btn-lg center-block">Book NOW!</button>
-
+           <form action="/reserve/complete" method="post">
+               <button type="submit" class="btn btn-success btn-lg center-block">Book NOW!</button>
+               <input type="hidden" name="userid" id="userid" value="<?php echo($user_info['id']) ?>" />
+           </form>
                                        <div class="flexslider-wrapper">
 
                                         <div id="slider" class="flexslider">
                                              <ul class="slides">
-                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c0/01.jpg')?>" alt="Slide 1" /></li>
-                                                  <li><img src= "<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c0/02.jpg')?>" /></li>
-                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/01_01.jpg')?>" /></li>
-                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/02_01.jpg')?>" /></li>
-                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/03_01.jpg')?>" /></li>
-                                                  <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/04_01.jpg')?>" /></li>
+                                                  <li><img src="<?php echo($results['image1'])?>" alt="Slide 1" /></li>
+                                                  <li><img src= "<?php echo($results['image2'])?>" /></li>
+                                                  <li><img src="<?php echo($results['image3'])?>" /></li>
+                                                  <li><img src="<?php echo($results['image4'])?>" /></li>
+                                                  <li><img src="<?php echo($results['image5'])?>" /></li>
+                                                  <li><img src="<?php echo($results['image6'])?>" /></li>
                                             </ul>
                                       </div> <!-- #slider -->
 
                                       <div id="carousel" class="flexslider">
                                        <ul class="slides">
-                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c0/01.jpg')?>" alt="Thumbnail 1" /></li>
-                                           <li><img src= "<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c0/02.jpg')?>" alt="Thumbnail 2"/></li>
-                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/01_01.jpg')?>" alt="Thumbnail 3"/></li>
-                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/02_01.jpg')?>" alt="Thumbnail 4"/></li>
-                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/03_01.jpg')?>" alt="Thumbnail 5"/></li>
-                                           <li><img src="<?php echo('https://gora.golf.rakuten.co.jp/img/golf/'. $results['course']['Item']['golfCourseId'] . '/img/c1/04_01.jpg')?>" /lt="Thumbnail 6"></li>
+                                           <li><img src="<?php echo($results['image1'])?>" alt="Thumbnail 1" /></li>
+                                           <li><img src= "<?php echo($results['image2'])?>" alt="Thumbnail 2"/></li>
+                                           <li><img src="<?php echo($results['image3'])?>" alt="Thumbnail 3"/></li>
+                                           <li><img src="<?php echo($results['image4'])?>" alt="Thumbnail 4"/></li>
+                                           <li><img src="<?php echo($results['image5'])?>" alt="Thumbnail 5"/></li>
+                                           <li><img src="<?php echo($results['image6'])?>" /lt="Thumbnail 6"></li>
                                            
                                       </ul>
                                 </div>  <!-- #carousel -->
@@ -229,7 +231,6 @@
             			</div>
 
             		</div>
-
             		<!-- footer row -->
             		<footer class="row footer js-footer">
             			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -242,6 +243,7 @@
 
             	</div>  <!-- .container-fluid -->
 
+<div id="audio"></div>
             	<div id="preloader">
             		<div id="status">&nbsp;</div>
             	</div><!-- /#preloader -->      
@@ -251,19 +253,20 @@
             	<script src="/js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
             	<script src="/js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
             	<script src="/js/templatemo-script.js"></script> <!-- Templatemo scripts -->
+                     
                   <script>
-                        $('.user').click(function(){
-                              $(this).addClass("pulse");
-                              $(this).addClass("selected");
-                              $(this).removeClass("user");
-                              $(".user-img").width(200);
-                              $(".user").empty();
-                              $(".user-text").empty();
-                              $(".user-text-under").text("　");
-                              $(".user-info").empty();
-                              //$(".selected").text("background","white")
-                        });
+                    setTimeout(function() {
+                        var audio = $("<audio autoplay></audio>", {
+                                });
+                        var source = $("<source>", {
+                                "src" : "<?php echo $result_text; ?>",
+                                "type" : "audio/wav"
+                                    });
+                        audio.append(source);
+                        $('#audio').append(audio);
+                    }, 1500);
                   </script>
 
             </body>
+
             </html>

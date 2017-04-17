@@ -25,7 +25,7 @@ class NaturalLanguageClassifier {
             $word = $each_analized_data->surface;
 
             $part_of_speech = $exploded_feature[0];
-            if ($word == "時" || $word == "人") {
+            if ($word == "時" || $word == "人" || $word == "日" || $word == "月") {
                 $words[$i] .= $word;
             } elseif (($part_of_speech == "名詞") && ($word != 'ゴルフ' && $word != '場' && $word != '県')) {
                 if ($words[$i] != '') {
@@ -56,7 +56,7 @@ class NaturalLanguageClassifier {
                         $class_results[$class_code[0]]['text'] = $class_code[1];
                         $class_results[$class_code[0]]['confidence'] = $confidence;
                     }
-                } elseif ($confidence > 0.4) {
+                } elseif ($confidence > 0.5) {
                     $class_results[$class_code[0]]['text'] = $each_word;
                     $class_results[$class_code[0]]['code'] = $class_code[1];
                     $class_results[$class_code[0]]['confidence'] = $confidence;

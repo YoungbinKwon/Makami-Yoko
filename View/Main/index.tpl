@@ -19,7 +19,6 @@
 <link rel="stylesheet" href="/css/animations.css">                                             <!-- Animation style -->
 <link rel="stylesheet" href="/css/weather-icons.min.css">
 <!-- font list is here https://erikflowers.github.io/weather-icons/ -->
-
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
               <!--[if lt IE 9]>
@@ -27,24 +26,16 @@
                 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
                 <![endif]-->
           </head>
-
           <body class="page">
-
-
            <!-- background images -->
            <div class="page-bg-imgs-list">
                 <img src="/img/golf-1758094_960_720.jpg" id="page-1-img" class="main-img" alt="About">
                 <img src="https://gora.golf.rakuten.co.jp/img/golf/80027/img/c1/01_01.jpg" id="page-2-img" alt="Gallery">
-
           </div>
-
           <div class="container-fluid">
-
                 <div class="row">
                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-
                           <div class="header">
-
                                <!-- site title -->
                                <header class="box box-darkgreen">
                                     <a href="javascript:void(0)" class="js-site-title">
@@ -52,9 +43,7 @@
                                    </a>            
                              </header>
                               </div> <!-- .header -->
-
                         </div>
-
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
                           <div class="content-wrapper js-content-wrapper">
                                <!-- about -->
@@ -65,21 +54,21 @@
                                                <div class="content-text chose-user">
                                                 <p class="user-text">Please chose your name.</p>
                                                 <div class="row">
-                                                      <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="img/baby_1.png" class="user-img margin-b-20" width=100>
+                                                      <div class="margin-t-50 col-xs-3 user" id="user1">
+                                                            <img src="<?php echo($yoko_user[1]['img']) ?>" class="user-img margin-b-20" width=100>
                                                       </div>
-                                                      <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user"><?php echo($customer[1]['name']) ?></em>
-                                                            <u><?php echo("Level." . $customer[1]['level']) ?></u>
-                                                      </div>
-
-                                                      <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="img/baby_2.png" class="user-img margin-b-20" width=100>
+                                                      <div class="margin-t-50 col-xs-3 user-info" id="user-info1">
+                                                            <em class="font-user" id="name1"><?php echo($customer[1]['name']) ?></em>
+                                                            <p><u><?php echo("Level." . $yoko_user[1]['level']) ?></u></p>
                                                       </div>
 
-                                                      <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user"><?php echo($customer[2]['name']) ?></em>
-                                                            <u><?php echo("Level." . $customer[2]['level']) ?></u>
+                                                      <div class="margin-t-50 col-xs-3 user" id="user2">
+                                                            <img src="<?php echo($yoko_user[2]['img']) ?>" class="user-img margin-b-20" width=100>
+                                                      </div>
+
+                                                      <div class="margin-t-50 col-xs-3 user-info" id="user-info2">
+                                                            <em class="font-user" id="name2"><?php echo($customer[2]['name']) ?></em>
+                                                            <p><u><?php echo("Level." . $yoko_user[2]['level']) ?></u></p>
                                                       </div>
                                                 </div>
                                                 <div class="row">
@@ -106,20 +95,20 @@
                                                       </div>
                                                 </div>
                                                 <div class="row">
-                                                      <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="img/baby_4.png" class="user-img margin-b-20" width=100>
+                                                      <div class="margin-t-50 col-xs-3 user" id="user3">
+                                                            <img src="<?php echo($yoko_user[3]['img']) ?>" class="user-img margin-b-20" width=100>
                                                       </div>
-                                                      <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user"><?php echo($customer[3]['name']) ?></em>
-                                                            <u><?php echo("Level." . $customer[3]['level']) ?></u>
+                                                      <div class="margin-t-50 col-xs-3 user-info" id="user-info3">
+                                                            <em class="font-user" id="name3"><?php echo($customer[3]['name']) ?></em>
+                                                            <p><u><?php echo("Level." . $yoko_user[3]['level']) ?></u></p>
                                                       </div>
 
-                                                      <div class="margin-t-50 col-xs-3 user">
-                                                            <img src="img/baby_3.png" class="user-img margin-b-20" width=100>
+                                                      <div class="margin-t-50 col-xs-3 user" id="user4">
+                                                            <img src="<?php echo($yoko_user[4]['img']) ?>" class="user-img margin-b-20" width=100>
                                                       </div>
-                                                      <div class="margin-t-50 col-xs-3 user-info">
-                                                            <em class="font-user"><?php echo($customer[4]['name']) ?></em>
-                                                            <u><?php echo("Level." . $customer[4]['level']) ?></u>
+                                                      <div class="margin-t-50 col-xs-3 user-info" id="user-info4">
+                                                            <em class="font-user" id="name4"><?php echo($customer[4]['name']) ?></em>
+                                                            <p><u><?php echo("Level." . $yoko_user[4]['level']) ?></u></p>
                                                       </div>
                                                       </div>
                                                       <div class="row">
@@ -145,21 +134,13 @@
                                                             </div>
                                                       </div>
                                                 </div>
-
-
                                           </div>            
-
                                     </section> <!-- #about -->
-
-
-
                                     <!-- gallery -->
                                     <section data-page-id="page-2" class="content content-gallery js-content">
-
                                           <header class="box box-green margin-b-20">
                                                <h2 class="box-text page-title-text"><img src="img/baby_1.png" width=60>The best cource for Keisei <i class="wi wi-small-craft-advisory"></i></h2>
                                          </header>
-
                                          <div class="content-text content-text-gallery">
                                                <!-- <p>Credits go to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for images.</p> -->
                                                <table class="table" table-bordered>
@@ -211,50 +192,63 @@
                           </div>
 
                     </div>            
-
               </section> <!-- #gallery -->
-
             				</div>
             			</div>
-
             		</div>
-
             		<!-- footer row -->
             		<footer class="row footer js-footer">
             			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
             				<p class="copyright-text">Copyright &copy; Team B! 
             				</p>  
-
             			</div>                
             		</footer>
-
             	</div>  <!-- .container-fluid -->
-
             	<div id="preloader">
             		<div id="status">&nbsp;</div>
             	</div><!-- /#preloader -->
-
            <form action="/voicesearch/result#page-2" method="post">
                <input type="hidden" name="audio" value="" />
+               <input type="hidden" name="userid" id="userid" value="" />
            </form>
-
             	<!-- load JS files -->
             	<script src="/js/jquery-1.11.3.min.js"></script> <!-- jQuery -->
             	<script src="/js/jquery.flexslider-min.js"></script> <!-- Flex Slider -->
             	<script src="/js/jquery.backstretch.min.js"></script> <!-- Backstretch http://srobbin.com/jquery-plugins/backstretch/ -->
             	<script src="/js/templatemo-script.js"></script> <!-- Templatemo scripts -->
                 <script type="text/javascript" src="/js/voicesearch.js"></script>
+                <script type="text/javascript" src="/js/canvas.js"></script>
                   <script>
                         $('.user').click(function(){
                               $(this).addClass("pulse");
                               $(this).addClass("selected");
                               $(this).removeClass("user");
+
+                              var id = $(this).attr("id");
+                              var userid = id.replace(/user/g,'');
+                              var username = $('#name' + userid);
+                              $(".page-title-text").text("Hello " + $(username).text());
+                              $("#userid").val(userid);
                               $(".user-img").width(200);
                               $(".user").empty();
                               $(".user-text").empty();
                               $(".user-text-under").text("　");
                               $(".user-info").empty();
+
+                              if (id === 'user1') {
+                                  $('#user-info1').width(200);
+                                  $('#user-info1').append('<canvas id="myCanvas" width="300" height="200" style="margin-left:80px"></canvas>');
+                              } else if (id === 'user2') {
+                                  $('#user1').width(100);
+                                  $('#user1').append('<canvas id="myCanvas" width="300" height="200"></canvas>');
+                              } else if (id === 'user3') {
+                                  $('#user-info3').width(200);
+                                  $('#user-info3').append('<canvas id="myCanvas" width="300" height="200" style="margin-left:80px"></canvas>');
+                              } else if (id === 'user4') {
+                                  $('#user3').width(120);
+                                  $('#user3').append('<canvas id="myCanvas" width="300" height="200"></canvas>');
+                              }
+
                               var audio = $("<audio autoplay></audio>", {
                                 });
                               var source = $("<source>", {
@@ -265,11 +259,12 @@
                               $(this).append(audio);
 
                             setTimeout(function(){
-                                setStart();
-                            }, 3000);
+                               setStart();
+                            }, 3500);
                             setTimeout(function() {
+                                mokoDraw();
                                 setEnd();
-                            }, 7000);
+                            }, 12000);
                         });
                  </script>
             </body>

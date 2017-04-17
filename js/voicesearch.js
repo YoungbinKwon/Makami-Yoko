@@ -75,7 +75,7 @@ function recordStart() {
                         recordStart();
                     }, 100);
                 }
-            }, 5000);
+            }, 12000);
         },
         function(err){
             console.log(err.name ? err.name : err);

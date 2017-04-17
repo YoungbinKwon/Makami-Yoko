@@ -36,16 +36,22 @@ class GoraPlanSearch {
     public function setParam($data)
     {
         $params = ['areaCode'=> 13,'playDate' => date("Y-m-d",strtotime("+2 week"))];
- 
         foreach ($data as $key => $value) {
             switch ($key) {
                 case "date":
-                    $param['playDate'] = $this->setDate($value);
+                    $params['playDate'] = $this->setDate($value['code']);
+                    break;
+                case "areaCode":
+                    $params['areaCode'] = (int) $value['code'];
+                    break;
+                case "time":
+                    $params['startTimeZone'] = (int) $value['code'];
+                    break;
                 default:
-                    $params[$key] = $value['code'];
+                    break;
             }
         }
-
+var_dump($params);
         return $params;
     }
 
@@ -54,23 +60,41 @@ class GoraPlanSearch {
         switch ($date) {
             case "today":
                 $param = date("Y-m-d");
+                break;
             case "tomorrow":
                 $param = date("Y-m-d",strtotime("+1 day"));
+                break;
             case "2day":
-                $param = date("Y-m-d",strtotime("+1 day"));
+                $param = date("Y-m-d",strtotime("+2 day"));
+                break;
             case "nextweek":
                 $param = date("Y-m-d",strtotime("+1 week"));
+                break;
             case "twoweek":
                 $param = date("Y-m-d",strtotime("+2 week"));
+                break;
             case "nextmonth":
                 $param = date("Y-m-d",strtotime("+1 month"));
+                break;
             case "twomonth":
                 $param = date("Y-m-d",strtotime("+2 month"));
+                break;
             default:
                 $param = date("Y-m-d",strtotime("+2 week"));
+                break;
         }
 
         return $param;
+    }
+
+    function getDateFromDayOfWeek($year, $month, $week, $day_of_week){ 
+        if($wday - $target >= 0) {
+            $day = $day - ($wday - $target);
+        } else {
+            $day = $day + ($target - $wday) - 7;
+        }
+        $time = mktime(0,0,0,$month, $day, $year);
+        return date("Y-m-d", $time);
     }
 
 }

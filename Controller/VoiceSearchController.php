@@ -40,7 +40,7 @@ class VoiceSearchController
             $user_id   = 2;
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
-*/
+
 $transcript = "北海道のゴルフ場 明日";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
@@ -49,8 +49,9 @@ $transcript = "北海道のゴルフ場 明日";
             } else {
                 $divided_words = [];
             }
-var_dump($divided_words);
-exit();
+*/
+$divided_words = ['東京'];
+
             $class_results = $nlc->classifyWords($divided_words);
             //Call Gora API and get plan
             $gora_plan = new GoraPlanSearch();

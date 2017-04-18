@@ -34,13 +34,14 @@ class Tagger {
 	public function __construct($dataDir, $outputEncoding) {
 
 		self::$BOS_NODES[0] = ViterbiNode::makeBOSEOS();
+var_dump(self::$BOS_NODES[0]);
+exit();
 		$this->wdc = new WordDic($dataDir);
 		$this->unk = new Unknown($dataDir);
 		$this->mtx = new Matrix($dataDir);
 		$this->outEnc = $outputEncoding;
 
-var_dump($this);
-exit();
+
 		if (IGO_LITTLE_ENDIAN) {
 			self::$DIC_ENC = "UTF-16LE";
 		} else {

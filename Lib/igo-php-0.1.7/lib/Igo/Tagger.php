@@ -32,6 +32,8 @@ class Tagger {
 	 *            バイナリ辞書があるディレクトリ
 	 */
 	public function __construct($dataDir, $outputEncoding) {
+var_dump($dataDir);
+exit();
 		self::$BOS_NODES[0] = ViterbiNode::makeBOSEOS();
 		$this->wdc = new WordDic($dataDir);
 		$this->unk = new Unknown($dataDir);

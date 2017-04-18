@@ -12,6 +12,8 @@ class WordDic {
 
 	public function __construct($dataDir) {
 		$this->trie = new Searcher($dataDir . "/word2id");
+echo('aaaaa');
+exit();
 		$this->data = FileMappedInputStream::_getString($dataDir . "/word.dat");
 		$this->indices = FileMappedInputStream::_getIntArray($dataDir . "/word.ary.idx");
 

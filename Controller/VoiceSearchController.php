@@ -46,7 +46,7 @@ class VoiceSearchController
             } else {
                 $divided_words = [];
             }
-exit();
+//exit();
 /*
 $nlc = new NaturalLanguageClassifier();
 $divided_words = ['東京'];

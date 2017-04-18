@@ -17,7 +17,6 @@ class NaturalLanguageClassifier {
     {
         $files = scandir(ROOT_PATH . '/Lib/ipadic');
         $igo = new Igo(ROOT_PATH . '/Lib/ipadic', 'UTF-8');
-exit();
         $analized_data = $igo->parse($phrase);
         $i = 0;
         $words[0] = "";

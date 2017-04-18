@@ -26,7 +26,7 @@ class FileMappedInputStream {
 
 		$this->cur += ($count * 4);
 
-var_dump(unpack("l*", fread($this->file, $count * 4)));
+var_dump(array_values(unpack("l*", fread($this->file, $count * 4))));
 exit();
 		return array_values(unpack("l*", fread($this->file, $count * 4)));
 	}

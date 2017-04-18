@@ -62,7 +62,7 @@
                                     <section data-page-id="page-1" class="content content-gallery js-content">
 
                                           <header class="box box-green margin-b-20">
-                                               <h2 class="box-text page-title-text"><img src="<?php echo($yoko_user['img'])?>" width=60><?php echo('The best cource for ' . $user_info['name'] . ' '); ?><i class="wi wi-small-craft-advisory"></i></h2>
+                                               <h2 class="box-text page-title-text"><img src="<?php echo($yoko_user['img'])?>" width=60><?php echo('The best course for ' . $user_info['name'] . ' '); ?><i class="wi wi-small-craft-advisory"></i></h2>
                                          </header>
 
                                          <div class="content-text content-text-gallery">

@@ -84,7 +84,7 @@
                                     <section data-page-id="page-2" class="content content-gallery js-content">
 
                                           <header class="box box-green margin-b-20">
-                                               <h2 class="box-text page-title-text"><img src="/img/baby_1.png" width=60>The best cource for Keisei <i class="wi wi-small-craft-advisory"></i></h2>
+                                               <h2 class="box-text page-title-text"><img src="/img/baby_1.png" width=60>The best course for Keisei <i class="wi wi-small-craft-advisory"></i></h2>
                                          </header>
 
                                          <div class="content-text content-text-gallery">
@@ -102,7 +102,7 @@
                                                    <tbody>
                                                     <tr>
                                                          <th>17th Mar (Fri) <i class="wi wi-day-cloudy"></i></th>
-                                                         <th><a  href="https://gora.golf.rakuten.co.jp">island golf cource</a></th>
+                                                         <th><a  href="https://gora.golf.rakuten.co.jp">island golf course</a></th>
                                                          <th><a href="https://gora.golf.rakuten.co.jp">Special plan</a></th>
                                                          <th>9:37</th>
                                                          <th>4,000yen</th>

@@ -15,7 +15,7 @@ class NaturalLanguageClassifier {
 
     public function divideWordsByIgo($phrase)
     {
-$files = scandir('./Lib');
+$files = scandir(ROOT_PATH . '/Lib/ipadic');
 var_dump($files);
 exit();
 

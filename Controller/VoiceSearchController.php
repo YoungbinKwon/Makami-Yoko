@@ -41,13 +41,13 @@ class VoiceSearchController
 //$transcript = "北海道のゴルフ場 明日";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
-exit();
-/*            if ($transcript != "") {
+            if ($transcript != "") {
                 $divided_words = $nlc->divideWordsByIgo($transcript);
             } else {
                 $divided_words = [];
             }
-
+exit();
+/*
 $nlc = new NaturalLanguageClassifier();
 $divided_words = ['東京'];
 */

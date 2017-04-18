@@ -71,7 +71,7 @@
                                                      <thread>
                                                           <tr>
                                                                <th>Date</th>
-                                                               <th>Cource name</th>
+                                                               <th>Course name</th>
                                                                <th>Plan contents</th>
                                                                <th>Prefecture</th>
                                                                <th>Price</th>

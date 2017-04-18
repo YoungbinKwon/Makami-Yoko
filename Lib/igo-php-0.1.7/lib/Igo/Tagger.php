@@ -32,13 +32,15 @@ class Tagger {
 	 *            バイナリ辞書があるディレクトリ
 	 */
 	public function __construct($dataDir, $outputEncoding) {
-var_dump($dataDir);
-exit();
+
 		self::$BOS_NODES[0] = ViterbiNode::makeBOSEOS();
 		$this->wdc = new WordDic($dataDir);
 		$this->unk = new Unknown($dataDir);
 		$this->mtx = new Matrix($dataDir);
 		$this->outEnc = $outputEncoding;
+
+var_dump($this);
+exit();
 		if (IGO_LITTLE_ENDIAN) {
 			self::$DIC_ENC = "UTF-16LE";
 		} else {

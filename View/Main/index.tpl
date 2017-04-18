@@ -75,7 +75,7 @@
                                                       <div class="col-xs-6 user-info">
                                                             <table class="table table-hover">
                                                                   <tr>
-                                                                        <td> Number of playing</td><td><?php echo($customer[1]['play_count']) ?></td>
+                                                                        <td> Number of reservation</td><td><?php echo($customer[1]['play_count']) ?></td>
                                                                   </tr>
                                                                   <tr>
                                                                         <td> Address</td>  <td><?php echo($customer[1]['address']) ?></td>
@@ -86,7 +86,7 @@
                                                       <div class="col-xs-6 user-info">
                                                             <table class="table table-hover">
                                                                   <tr>
-                                                                        <td> Number of playing</td><td><?php echo($customer[2]['play_count']) ?></td>
+                                                                        <td> Number of reservation</td><td><?php echo($customer[2]['play_count']) ?></td>
                                                                   </tr>
                                                                   <tr>
                                                                         <td> Adress</td>  <td><?php echo($customer[2]['address']) ?></td>
@@ -115,7 +115,7 @@
                                                             <div class="col-xs-6 user-info">
                                                                   <table class="table table-hover">
                                                                         <tr>
-                                                                              <td> Number of playing</td><td><?php echo($customer[3]['play_count']) ?></td>
+                                                                              <td> Number of reservation</td><td><?php echo($customer[3]['play_count']) ?></td>
                                                                         </tr>
                                                                         <tr>
                                                                               <td> Address</td>  <td><?php echo($customer[3]['address']) ?></td>
@@ -125,7 +125,7 @@
                                                             <div class="col-xs-6 user-info">
                                                                    <table class="table table-hover">
                                                                         <tr>
-                                                                              <td> Number of playing</td><td><?php echo($customer[4]['play_count']) ?></td>
+                                                                              <td> Number of reservation</td><td><?php echo($customer[4]['play_count']) ?></td>
                                                                         </tr>
                                                                         <tr>
                                                                               <td> Address</td>  <td><?php echo($customer[4]['address']) ?></td>

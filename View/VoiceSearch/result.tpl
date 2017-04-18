@@ -79,7 +79,7 @@
                                                    </thread>
                                                    <tbody>
                                                     <tr>
-                                                         <th><?php echo(date('D,d (M)' ,strtotime($results['plan']['callInfo']['playDate']))) ?> <i class="wi wi-day-cloudy"></i></th>
+                                                         <th><?php echo(date('M,d (D)' ,strtotime($results['plan']['callInfo']['playDate']))) ?> <i class="wi wi-day-cloudy"></i></th>
                                                          <th><a  href="<?php echo('https://booking.gora.golf.rakuten.co.jp/guide/disp/c_id/' . $results['course']['Item']['golfCourseId']) ?>"><?php echo($results['course']['Item']['golfCourseName']) ?></a></th>
                                                          <th><a href="<?php echo('https://search.gora.golf.rakuten.co.jp//?menu=compe&act=detail&plan_id=' . $results['plan']['planId']) ?>"><?php echo($results['plan']['planName']) ?></a></th>
                                                          <th><?php echo(substr($results['course']['Item']['address'],0,9)) ?></th>

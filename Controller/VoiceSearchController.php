@@ -38,22 +38,19 @@ class VoiceSearchController
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
 
-var_dump($user_info);
-exit();
-
-/*
-$transcript = "北海道のゴルフ場 明日";
+//$transcript = "北海道のゴルフ場 明日";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
-            if ($transcript != "") {
+exit();
+/*            if ($transcript != "") {
                 $divided_words = $nlc->divideWordsByIgo($transcript);
             } else {
                 $divided_words = [];
             }
-*/
+
 $nlc = new NaturalLanguageClassifier();
 $divided_words = ['東京'];
-
+*/
             $class_results = $nlc->classifyWords($divided_words);
             //Call Gora API and get plan
             $gora_plan = new GoraPlanSearch();

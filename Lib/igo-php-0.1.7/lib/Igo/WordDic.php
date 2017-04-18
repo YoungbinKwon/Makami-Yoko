@@ -12,11 +12,11 @@ class WordDic {
 
 	public function __construct($dataDir) {
 		$this->trie = new Searcher($dataDir . "/word2id");
-
 		$this->data = FileMappedInputStream::_getString($dataDir . "/word.dat");
-echo('aaaaa');
-exit();
 		$this->indices = FileMappedInputStream::_getIntArray($dataDir . "/word.ary.idx");
+echo('aaaa');
+exit();
+
 
 		$fmis = new FileMappedInputStream($dataDir . "/word.inf");
 		$wordCount = $fmis->size() / (4 + 2 + 2 + 2);

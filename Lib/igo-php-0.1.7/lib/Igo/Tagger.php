@@ -34,9 +34,9 @@ class Tagger {
 	public function __construct($dataDir, $outputEncoding) {
 
 		self::$BOS_NODES[0] = ViterbiNode::makeBOSEOS();
-var_dump(self::$BOS_NODES[0]);
-exit();
 		$this->wdc = new WordDic($dataDir);
+echo('aaa');
+exit();
 		$this->unk = new Unknown($dataDir);
 		$this->mtx = new Matrix($dataDir);
 		$this->outEnc = $outputEncoding;

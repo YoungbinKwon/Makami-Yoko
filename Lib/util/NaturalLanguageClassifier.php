@@ -15,6 +15,10 @@ class NaturalLanguageClassifier {
 
     public function divideWordsByIgo($phrase)
     {
+$files = scandir('./Lib');
+var_dump($files);
+exit();
+
         $igo = new Igo('./Lib/ipadic', 'UTF-8');
 exit();
         $analized_data = $igo->parse($phrase);

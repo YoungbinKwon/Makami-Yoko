@@ -185,7 +185,7 @@
                   <script>
                         mokoReserveDraw();
                         setTimeout(function(){
-                            window.location.href = '/main';
+                            window.location.href = '/';
                         }, 6000);
                   </script>
 

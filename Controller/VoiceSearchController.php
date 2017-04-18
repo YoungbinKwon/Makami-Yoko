@@ -38,7 +38,6 @@ class VoiceSearchController
             $customer  = new Customer();
             $user_info = $customer->selectById($user_id);
 
-//$transcript = "北海道のゴルフ場 明日";
             //Get parameters from text
             $nlc = new NaturalLanguageClassifier();
             if ($transcript != "") {
@@ -46,11 +45,7 @@ class VoiceSearchController
             } else {
                 $divided_words = [];
             }
-//exit();
-/*
-$nlc = new NaturalLanguageClassifier();
-$divided_words = ['東京'];
-*/
+
             $class_results = $nlc->classifyWords($divided_words);
             //Call Gora API and get plan
             $gora_plan = new GoraPlanSearch();
@@ -65,7 +60,10 @@ $divided_words = ['東京'];
                 foreach ($gora_result['Items'] as $key => $item) {
                     if (!empty($item['Item']['planInfo'])) {
                         foreach ($item['Item']['planInfo'] as $plan) {
-                            if(strpos($plan['plan']['planName'],'ハーフ') === false && strpos($plan['plan']['planName'],'ショートコース') === false && strpos($plan['plan']['planName'],'楽ゴル') === false && strpos($plan['plan']['planName'],'レッスン') === false && strpos($plan['plan']['planName'],'アーリーバード') === false && strpos($plan['plan']['planName'],'以上') === false && strpos($item['Item']['golfCourseName'],'ショートコース') === false && strpos($item['Item']['golfCourseName'],'楽ゴル') === false && strpos($item['Item']['golfCourseName'],'レッスン') === false){
+                            if(strpos($plan['plan']['planName'],'ハーフ') === false && strpos($plan['plan']['planName'],'ショートコース') === false && strpos($plan['plan']['planName'],'楽ゴル') === false && strpos($plan['plan']['planName'],'レッスン') === false && strpos($plan['plan']['planName'],'アーリーバード') === false && strpos($plan['plan']['planName'],'以上') === false && strpos($item['Item']['golfCourseName'],'ショートコース') === false && strpos($item['Item']['golfCourseName'],'楽ゴル') === false && strpos($item['Item']['golfCourseName'],'レッスン') === false && $plan['plan']['price'] > 8000){
+
+
+
                                 $plan_info_array[$plan['plan']['planId']] = $plan['plan'];
                                 $plan_info_array[$plan['plan']['planId']]['golfCourseId'] = $item['Item']['golfCourseId'];
                                 $course_id_array[$item['Item']['golfCourseId']] = $item['Item']['golfCourseId'];

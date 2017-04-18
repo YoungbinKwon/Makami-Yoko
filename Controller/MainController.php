@@ -26,7 +26,7 @@ class MainController
         }
 
         $tts = new TextToSpeech();
-        $this->view->result_text = $tts->getAudio("予約したいゴルフ場を教えてね");
+        $this->view->result_text = $tts->getAudio("いつ、どこでゴルフをしますか？");
         $this->view->yoko_user = $yoko_user;
         $this->view->display("Main/index.tpl");
     }

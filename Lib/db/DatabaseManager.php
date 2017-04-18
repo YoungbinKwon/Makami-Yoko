@@ -16,15 +16,15 @@ Class DatabaseManager
         } else {
             $vcap_services = json_decode($_ENV["VCAP_SERVICES" ]);
             //if "mysql" db service is bound to this application
-            if ($vcap_services->{'mysql-5.5'}) { 
-                $db = $vcap_services->{'mysql-5.5'}[0]->credentials;
+      //      if ($vcap_services->{'mysql-5.5'}) { 
+       //         $db = $vcap_services->{'mysql-5.5'}[0]->credentials;
             //if cleardb mysql db service is bound to this application
-            } else if($vcap_services->{'cleardb'}) { 
+       //     } else if($vcap_services->{'cleardb'}) { 
                 $db = $vcap_services->{'cleardb'}[0]->credentials;
-            } else { 
-                echo "Error: No suitable MySQL database bound to the application. <br>";
-                die();
-            }
+       //     } else { 
+       //         echo "Error: No suitable MySQL database bound to the application. <br>";
+        //        die();
+          //  }
             $mysql_database = $db->name;
             $mysql_port=$db->port;
             $mysql_server_name =$db->hostname . ':' . $db->port;

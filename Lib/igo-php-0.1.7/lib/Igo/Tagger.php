@@ -35,8 +35,6 @@ class Tagger {
 
 		self::$BOS_NODES[0] = ViterbiNode::makeBOSEOS();
 		$this->wdc = new WordDic($dataDir);
-echo('aaa');
-exit();
 		$this->unk = new Unknown($dataDir);
 		$this->mtx = new Matrix($dataDir);
 		$this->outEnc = $outputEncoding;

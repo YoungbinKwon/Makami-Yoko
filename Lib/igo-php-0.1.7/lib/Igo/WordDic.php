@@ -12,11 +12,11 @@ class WordDic {
 
 	public function __construct($dataDir) {
 		$this->trie = new Searcher($dataDir . "/word2id");
-echo('aaaaa');
-exit();
+
 		$this->data = FileMappedInputStream::_getString($dataDir . "/word.dat");
 		$this->indices = FileMappedInputStream::_getIntArray($dataDir . "/word.ary.idx");
-
+echo('aaaaa');
+exit();
 		$fmis = new FileMappedInputStream($dataDir . "/word.inf");
 		$wordCount = $fmis->size() / (4 + 2 + 2 + 2);
 		$this->dataOffsets = $fmis->getIntArrayInstance($wordCount); //単語の素性データの開始位置

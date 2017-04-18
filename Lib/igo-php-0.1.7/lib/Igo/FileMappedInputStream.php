@@ -23,10 +23,11 @@ class FileMappedInputStream {
 
 	public function getIntArray($count) {
 
-var_dump($count);
-exit();
 
 		$this->cur += ($count * 4);
+
+var_dump($count);
+exit();
 		return array_values(unpack("l*", fread($this->file, $count * 4)));
 	}
 

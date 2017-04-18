@@ -53,8 +53,6 @@ class Igo {
 	private $tagger;
 
 	public function __construct($dataDir, $outputEncoding = null) {
-var_dump($dataDir);
-exit();
 		$this->tagger = new Tagger($dataDir, $outputEncoding);
 	}
 

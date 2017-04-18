@@ -63,7 +63,7 @@
             						<header class="box box-black margin-b-20">
                                                 -->
                                                 <header class="box box-green margin-b-20">
-                                                     <h2 class="box-text page-title-text">Thank you for your reserve!</h2>
+                                                     <h2 class="box-text page-title-text">Thank you for your reservation!</h2>
                                                </header>
                                                <div class="content-text chose-user">
                                                 <div class="row">

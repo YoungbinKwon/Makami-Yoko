@@ -57,7 +57,7 @@ class NaturalLanguageClassifier {
                         $class_results[$class_code[0]]['text'] = $class_code[1];
                         $class_results[$class_code[0]]['confidence'] = $confidence;
                     }
-                } elseif ($confidence > 0.5) {
+                } elseif ($confidence > 0.4) {
                     $class_results[$class_code[0]]['text'] = $each_word;
                     $class_results[$class_code[0]]['code'] = $class_code[1];
                     $class_results[$class_code[0]]['confidence'] = $confidence;
